@@ -1,8 +1,7 @@
 module.exports = function (knex) {
-
-	return {
-		findAll: function (table) {
-		return knex(table).select()
-		}
-	}
+  return {
+    findAll: function (table) {
+      return knex(table).select()
+    }
+  }
 }
