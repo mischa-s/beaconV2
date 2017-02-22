@@ -31,6 +31,9 @@ body {
   margin-right: 10%;
   align-items: center;
 }
+.map {
+  margin-left: 10%;
+}
 button {
   background-color: #69891E;
   padding: 1.5em;

@@ -27,12 +27,15 @@ class Map extends React.Component {
 
   render () {
     const mapStyle = {
-      height: 400
+      height: '40vh',
+      width: '30vw'
     }
 
     return (
-      <div ref='map' style={mapStyle}> Loading map...
-           </div>
+      <div className='map'>
+        <div ref='map' style={mapStyle}> Loading map...
+        </div>
+      </div>
     )
   }
 
