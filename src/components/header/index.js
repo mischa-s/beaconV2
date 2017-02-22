@@ -7,9 +7,11 @@ function Header (props) {
       <div className='headerText'>
         <h1>Beacon Farms</h1>
       </div>
-      <button>Farms Profiles</button>
-      <button>Join The Network</button>
-      <button>About</button>
+      <div className='navbar'>
+        <button>Farms Profiles</button>
+        <button>Join The Network</button>
+        <button>About</button>
+      </div>
     </div>
   )
 }

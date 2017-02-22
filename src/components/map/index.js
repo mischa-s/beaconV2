@@ -1,12 +1,43 @@
 const React = require('react')
-const { connect } = require('react-redux')
-
-function Header (props) {
-  return(
-    <div className='map'>
-      <h2> Map Here</h2>
-    </div>
-  )
+const EIFFEL_TOWER_POSITION = {
+  lat: 48.858608,
+  lng: 2.294471
 }
 
-module.exports = connect((state) => state)(Header)
+class Map extends React.Component {
+  componentDidMount () {
+    this.map = new google.maps.Map(this.refs.map, {
+      center: EIFFEL_TOWER_POSITION,
+      zoom: 2
+    })
+  }
+
+  componentDidUpdate () {
+    const farms = this.props.farms
+    const forGeocoding = this.props.forGeocoding
+    const arrOfFarms = farms.map((farm) => {
+      return new google.maps.Marker({
+        position: {lat: farm.latitude, lng: farm.longitude},
+        map: this.map,
+        title: farm.name
+      })
+    })
+    return arrOfFarms
+  }
+
+  render () {
+    const mapStyle = {
+      height: '40vh',
+      width: '30vw'
+    }
+
+    return (
+      <div className='map'>
+        <div ref='map' style={mapStyle}> Loading map...
+        </div>
+      </div>
+    )
+  }
+
+}
+module.exports = (Map)
