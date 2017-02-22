@@ -1,17 +1,12 @@
 const React = require('react')
 const { connect } = require('react-redux')
 const { Link } = require('react-router')
+const Header = require('../components/header')
 
 const App = (props) => {
 	return (
-		<div>
-			<div className="navBar">
-				<nav>
-						<Link to="/"><button>Home</button></Link>
-						<Link to="/users"><button>Users</button></Link>
-				</nav>
-			</div>
-			<br />
+		<div className='flexContainer'>
+			<Header />
 			<br />
 			{props.children}
 		</div>
