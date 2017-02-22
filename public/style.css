@@ -1,5 +1,12 @@
+/*{
+#5B3E2C
+#AD8369
+#69891E
+#E2DCBE
+}
+*/
 body {
-  background-color: white;
+  background-color: #E2DCBE;
   font-family: 'Raleway', sans-serif;
 }
 .flexContainer{
@@ -7,10 +14,25 @@ body {
   flex-flow: wrap;
 }
 .header{
+  display: inline-flex;
   flex: 100%;
-  flex-direction: column;
+}
 
-  }
 .headerText{
+  display: inline-flex;
+  align-content: center;
+  margin-left: 2em;
+  margin-right: auto;
+  font-size: 2em
+}
 
+.navbar {
+  display: inline-flex;
+  margin-right: 10%;
+  align-items: center;
+}
+button {
+  background-color: #69891E;
+  padding: 1.5em;
+  margin: 1em;
 }
