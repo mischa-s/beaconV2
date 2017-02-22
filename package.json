@@ -1,7 +1,7 @@
 {
-  "name": "Drink-Splitter",
+  "name": "Beacon-Farms",
   "version": "1.0.0",
-  "description": "Drink Splitter",
+  "description": "Beacon Farms V2",
   "main": "index.js",
   "scripts": {
     "test": "tape test/**/*.tape.js | tap-diff",
