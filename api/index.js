@@ -1,5 +1,5 @@
-const resources = require('./resources')
+const farms = require('./farms')
 
 module.exports = {
-  resources
+  farms
 }
