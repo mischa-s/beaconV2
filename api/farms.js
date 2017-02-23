@@ -3,12 +3,12 @@ const express = require('express')
 const route = express.Router()
 
 module.exports = function (db) {
-  route.get('/users', users) // gets all the users
+  route.get('/farms', farms) // gets all the farms
 
-  function users (req, res, next) {
-    db.findAll('users')
-      .then((users) => {
-        res.json(users)
+  function farms (req, res, next) {
+    db.findAll('farms')
+      .then((farms) => {
+        res.json(farms)
       })
   }
 
