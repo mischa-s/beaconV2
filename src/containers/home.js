@@ -4,10 +4,11 @@ const Map = require('../components/map')
 const FeaturedFarms = require('../components/featuredFarms')
 
 function Home (props) {
+  const { dispatch, allFarms } = props
   return (
     <div>
-      <Map />
-      <FeaturedFarms allFarms={props.allFarms} />
+      <Map dispatch={dispatch} allFarms={allFarms} />
+      <FeaturedFarms allFarms={allFarms} dispatch={dispatch} />
     </div>
   )
 }

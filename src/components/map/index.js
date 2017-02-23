@@ -13,9 +13,10 @@ class Map extends React.Component {
   }
 
   componentDidUpdate () {
-    const farms = this.props.farms
+    console.log(this.props, 'props in map')
+    const allFarms = this.props.allFarms
     const forGeocoding = this.props.forGeocoding
-    const arrOfFarms = farms.map((farm) => {
+    const arrOfFarms = allFarms.map((farm) => {
       return new google.maps.Marker({
         position: {lat: farm.latitude, lng: farm.longitude},
         map: this.map,

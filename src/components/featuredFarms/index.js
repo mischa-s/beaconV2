@@ -1,11 +1,9 @@
 const React = require('react')
-const { connect } = require('react-redux')
 const request = require('superagent')
 const _ = require('lodash')
 
 function FeaturedFarms (props) {
   const { allFarms, dispatch } = props
-  console.log('farms', allFarms)
 
   function getTheFarms () {
     request.get('/api/v1/farms', (err, res) => {
@@ -32,4 +30,4 @@ function FeaturedFarms (props) {
   )
 }
 
-module.exports = connect((state) => state)(FeaturedFarms)
+module.exports = FeaturedFarms
