@@ -7,7 +7,7 @@ function Home (props) {
   return (
     <div>
       <Map />
-      <FeaturedFarms />
+      <FeaturedFarms allFarms={props.allFarms} />
     </div>
   )
 }
