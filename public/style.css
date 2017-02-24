@@ -8,6 +8,7 @@
 body {
   background-color: #E2DCBE;
   font-family: 'Raleway', sans-serif;
+  margin: 0
 }
 .flexContainer{
   display: flex;
@@ -16,6 +17,8 @@ body {
 .header{
   display: inline-flex;
   flex: 100%;
+  background-color: #AD8369;
+  padding: 1em;
 }
 
 .headerText{
@@ -32,10 +35,34 @@ body {
   align-items: center;
 }
 .map {
-  margin-left: 10%;
+  display: flex;
+  margin: 2em;
+  margin-left: 5%;
+  background-color: blue;
 }
 button {
   background-color: #69891E;
   padding: 1.5em;
   margin: 1em;
+  border: none;
+  color: white;
 }
+.listOfFarms{
+  display: flex;
+  flex-direction: column;
+  background-color: #69891E;
+  padding: 1em;
+  margin: 2em;
+  margin-left: auto;
+  width: 40%;
+  margin-right: 5%;
+  align-items: center;
+  text-align: center;
+}
+.eachFarm img{
+  width: 100%
+}
+
+.homeContainer{
+  display: flex;
+  width: 100%
