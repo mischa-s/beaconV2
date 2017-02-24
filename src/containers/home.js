@@ -6,7 +6,7 @@ const FeaturedFarms = require('../components/featuredFarms')
 function Home (props) {
   const { dispatch, allFarms } = props
   return (
-    <div>
+    <div className='homeContainer'>
       <Map dispatch={dispatch} allFarms={allFarms} />
       <FeaturedFarms allFarms={allFarms} dispatch={dispatch} />
     </div>
