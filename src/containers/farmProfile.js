@@ -7,10 +7,11 @@ const _ = require('lodash')
 
 class FarmProfile extends React.Component {
 
-  theDroidYourLookingFor () {
+  componentWillMount () {
     const { allFarms } = this.props
-    if (!allFarms) this.getAndFilterTheFarms()
-    else this.filterTheFarms(allFarms)
+    if (!allFarms) {
+
+    }
   }
   getAndFilterTheFarms () {
     const { dispatch } = this.props
@@ -19,44 +20,25 @@ class FarmProfile extends React.Component {
       if (err) throw err
       else {
         dispatch({type: 'GET_ALL_FARMS', payload: theFarms}, (err, res) => {
-          const id = 1
           if (err) throw err
-          else {
-            theFarms.filter(id === 'id')((farm) => (
-              <div className='eachFarm' key={farm.id}>
-                <h3>{farm.name}, {farm.location}</h3>
-                <div className='farmImage'>
-                  <img src={farm.mainImage} />
-                </div>
-              </div>
-            ))
-          }
         })
       }
     })
   }
-  filterTheFarms (theFarms) {
-    console.log(theFarms, 'filter the farms')
-    const id = 1
-    theFarms.filter(id === 'id')((farm) => (
-      <div className='eachFarm' key={farm.id}>
-        <h3>{farm.name}, {farm.location}</h3>
-        <div className='farmImage'>
-          <img src={farm.mainImage} />
-        </div>
-      </div>
-    ))
-  }
   render () {
-    console.log('rendering')
-    const { allFarms } = this.props
-    const filteredResult = this.theDroidYourLookingFor(allFarms)
+    const { currentFarm } = this.props
     return (
-      <div className='listOfFarms'>
-        < filteredResult />
+      <div>
+        <h2>
+          {currentFarm.name}
+        </h2>
       </div>
     )
   }
 }
 
 module.exports = connect((state) => state)(FarmProfile)
+
+// Page is loading, are the farms loaded? If not return object with the right keys and no data
+
+// When farms are loaded, rerender the page with the farm data
