@@ -1,14 +1,17 @@
 /*{
-#5B3E2C
-#AD8369
-#69891E
-#E2DCBE
+rgba(62, 39, 35, 0.8)
+#D7CCC8
+rgba(76, 175, 80, 0.66)
+#F0F4C3
+
 }
 */
 body {
-  background-color: #E2DCBE;
+  background-color: #F0F4C3;
+  background-image: url('./wood.jpg');
   font-family: 'Raleway', sans-serif;
-  margin: 0
+  margin: 0;
+  color: white
 }
 .flexContainer{
   display: flex;
@@ -17,7 +20,7 @@ body {
 .header{
   display: inline-flex;
   flex: 100%;
-  background-color: #AD8369;
+  background-color: rgba(76, 175, 80, 0.8);
   padding: 1em;
 }
 
@@ -38,19 +41,22 @@ body {
   display: flex;
   margin: 2em;
   margin-left: 5%;
-  background-color: blue;
+  border-color: rgba(62, 39, 35, 0.9);
+  border-style: solid;
+  border-width: 2em;
+  height: 40vh
 }
 button {
-  background-color: #69891E;
+  background-color: rgba(62, 39, 35, 0.9);
   padding: 1.5em;
   margin: 1em;
   border: none;
-  color: white;
+  color: white
 }
 .listOfFarms{
   display: flex;
   flex-direction: column;
-  background-color: #69891E;
+  background-color: rgba(62, 39, 35, 0.9);
   padding: 1em;
   margin: 2em;
   margin-left: auto;

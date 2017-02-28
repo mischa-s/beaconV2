@@ -8,21 +8,25 @@ const _ = require('lodash')
 class FarmProfile extends React.Component {
 
   componentWillMount () {
-    const { allFarms } = this.props
+    const { dispatch, allFarms } = this.props
     if (!allFarms) {
-
+      request.get('/api/v1/farms', (err, res) => {
+        const theFarms = res.body
+        if (err) throw err
+        else {
+          console.log('heard back from API')
+          dispatch({type: 'GET_ALL_FARMS', payload: theFarms})
+          this.filterById()
+        }
+      })
     }
   }
-  getAndFilterTheFarms () {
-    const { dispatch } = this.props
-    request.get('/api/v1/farms', (err, res) => {
-      const theFarms = res.body
-      if (err) throw err
-      else {
-        dispatch({type: 'GET_ALL_FARMS', payload: theFarms}, (err, res) => {
-          if (err) throw err
-        })
-      }
+  filterById () {
+    const { dispatch, allFarms } = this.props
+    const id = 1
+    console.log(allFarms,'all farms in filter by id')
+    _.find(allFarms, 'id', id)((farm) => {
+      dispatch({type: 'GET_FARM', payload: farm})
     })
   }
   render () {
