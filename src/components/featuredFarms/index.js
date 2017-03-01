@@ -1,7 +1,7 @@
 const React = require('react')
 const request = require('superagent')
 const _ = require('lodash')
-
+console.log(_, 'lodash in featured farms')
 function FeaturedFarms (props) {
   const { allFarms, dispatch } = props
 
