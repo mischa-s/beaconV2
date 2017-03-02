@@ -4,7 +4,6 @@ const { Link } = require('react-router')
 const Header = require('../components/header')
 
 const App = (props) => {
-	console.log(props, 'app props')
 	return (
 		<div className='flexContainer'>
 			<Header />

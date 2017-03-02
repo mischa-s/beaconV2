@@ -3,31 +3,26 @@ const { connect } = require('react-redux')
 const Map = require('../components/map')
 const FeaturedFarms = require('../components/featuredFarms')
 const request = require('superagent')
-const _ = require('lodash')
 
 class FarmProfile extends React.Component {
 
   componentWillMount () {
     const { dispatch, allFarms } = this.props
+    const id = Number(this.props.routeParams.id)
     if (!allFarms) {
       request.get('/api/v1/farms', (err, res) => {
         const theFarms = res.body
         if (err) throw err
         else {
-          console.log('heard back from API')
           dispatch({type: 'GET_ALL_FARMS', payload: theFarms})
-          this.filterById()
+          const farm = theFarms.find((farm) => farm.id === id)
+          dispatch({type: 'GET_FARM', payload: farm})
         }
       })
-    }
-  }
-  filterById () {
-    const { dispatch, allFarms } = this.props
-    const id = 1
-    console.log(allFarms,'all farms in filter by id')
-    _.find(allFarms, 'id', id)((farm) => {
+    } else {
+      const farm = allFarms.find((farm) => farm.id === id)
       dispatch({type: 'GET_FARM', payload: farm})
-    })
+    }
   }
   render () {
     const { currentFarm } = this.props

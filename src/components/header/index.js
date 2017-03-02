@@ -1,11 +1,15 @@
 const React = require('react')
 const { connect } = require('react-redux')
+const { Link } = require('react-router')
 
 function Header (props) {
-  return(
+  console.log(props, 'props in header')
+  return (
     <div className='header'>
       <div className='headerText'>
-        <h1>Beacon Farms</h1>
+        <Link to={'/'}>
+          <h1>Beacon Farms</h1>
+        </Link>
       </div>
       <div className='navbar'>
         <button>Farms Profiles</button>
