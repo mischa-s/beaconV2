@@ -4,7 +4,6 @@ const { Link } = require('react-router')
 
 function Header (props) {
   console.log(props, 'props in header')
-  const id = 1
   return (
     <div className='header'>
       <div className='headerText'>
@@ -13,9 +12,7 @@ function Header (props) {
         </Link>
       </div>
       <div className='navbar'>
-        <Link to={`/farm/${id}`}>
-          <button>Farms Profiles</button>
-        </Link>
+        <button>Farms Profiles</button>
         <button>Join The Network</button>
         <button>About</button>
       </div>
