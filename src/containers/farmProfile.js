@@ -28,7 +28,7 @@ class FarmProfile extends React.Component {
     const { currentFarm } = this.props
     return (
       <div>
-        <h2>
+        <h2 className='individualFarm'>
           {currentFarm.name}
         </h2>
       </div>
@@ -37,7 +37,3 @@ class FarmProfile extends React.Component {
 }
 
 module.exports = connect((state) => state)(FarmProfile)
-
-// Page is loading, are the farms loaded? If not return object with the right keys and no data
-
-// When farms are loaded, rerender the page with the farm data
