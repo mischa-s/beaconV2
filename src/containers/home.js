@@ -7,7 +7,9 @@ function Home (props) {
   const { dispatch, allFarms } = props
   return (
     <div className='homeContainer'>
-      <Map dispatch={dispatch} allFarms={allFarms} />
+      <div className='homepageMap'>
+        <Map dispatch={dispatch} allFarms={allFarms} />
+      </div>
       <FeaturedFarms allFarms={allFarms} dispatch={dispatch} />
     </div>
   )

@@ -6,11 +6,22 @@ rgba(76, 175, 80, 0.66)
 
 }
 */
+a {
+  text-decoration: none;
+  color: white
+}
 body {
   background-color: #F0F4C3;
   background-image: url('./wood.jpg');
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  color: white
+}
+button {
+  background-color: rgba(62, 39, 35, 0.9);
+  padding: 1.5rem;
+  margin: 1rem;
+  border: none;
   color: white
 }
 .flexContainer{
@@ -21,15 +32,15 @@ body {
   display: inline-flex;
   flex: 100%;
   background-color: rgba(76, 175, 80, 0.8);
-  padding: 1em;
+  padding: 1rem;
 }
 
 .headerText{
   display: inline-flex;
   align-content: center;
-  margin-left: 2em;
+  margin-left: 2rem;
   margin-right: auto;
-  font-size: 2em
+  font-size: 2rem
 }
 .headerText a {
   color: white;
@@ -41,38 +52,63 @@ body {
   margin-right: 10%;
   align-items: center;
 }
-.map {
-  display: flex;
-  margin: 2em;
-  margin-left: 5%;
-  border-color: rgba(62, 39, 35, 0.9);
-  border-style: solid;
-  border-width: 2em;
-  height: 40vh
-}
-button {
-  background-color: rgba(62, 39, 35, 0.9);
-  padding: 1.5em;
-  margin: 1em;
-  border: none;
-  color: white
-}
-.listOfFarms{
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(62, 39, 35, 0.9);
-  padding: 1em;
-  margin: 2em;
-  margin-left: auto;
-  width: 40%;
-  margin-right: 5%;
-  align-items: center;
-  text-align: center;
-}
-.eachFarm img{
-  width: 100%
-}
 
 .homeContainer{
   display: flex;
   width: 100%
+}
+.homepageMap {
+  display: flex;
+  margin: 2rem;
+  margin-left: 5%;
+  border-color: rgba(62, 39, 35, 0.9);
+  border-style: solid;
+  border-width: 2rem;
+  height: 40vh
+}
+.featuredFarms{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem;
+  margin-left: auto;
+  margin-right: 5%;
+  padding-bottom: 2rem;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(62, 39, 35, 0.9);
+}
+.featuredFarmsHeaderText{
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: rgba(76, 175, 80, 0.66)
+}
+.eachFeaturedFarm img{
+  max-width: 20vw;
+  max-height: 30vh;
+}
+.currentFarm{
+  margin: auto;
+  background-color: rgba(62, 39, 35, 0.9);
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em
+}
+.currentFarmContent{
+  display: flex;
+  justify-content: space-around;
+}
+.currentFarmContent img{
+  max-width: 40vw;
+  max-height: 30vh;
+  margin: 1em
+}
+.currentFarmHeaderText{
+  font-size: 3rem;
+  padding: 1rem
+}
+.currentFarmMap{
+  display: flex;
+  justify-content: center;
+  margin: 2rem
+}
