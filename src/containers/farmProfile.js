@@ -1,7 +1,6 @@
 const React = require('react')
 const { connect } = require('react-redux')
 const Map = require('../components/map')
-const FeaturedFarms = require('../components/featuredFarms')
 const request = require('superagent')
 
 class FarmProfile extends React.Component {
@@ -25,12 +24,19 @@ class FarmProfile extends React.Component {
     }
   }
   render () {
-    const { currentFarm } = this.props
+    const { currentFarm, dispatch } = this.props
     return (
-      <div>
-        <h2 className='individualFarm'>
-          {currentFarm.name}
-        </h2>
+      <div className='currentFarm'>
+        <h2 className='currentFarmHeaderText'>{currentFarm.name}, {currentFarm.location}</h2>
+        <div className='currentFarmContent'>
+          <div className='farmImage'>
+            <img src={currentFarm.mainImage} />
+          </div>
+          <h3>{currentFarm.type}</h3>
+        </div>
+        <div className='currentFarmMap'>
+          <Map dispatch={dispatch} allFarms={[currentFarm]} />
+        </div>
       </div>
     )
   }

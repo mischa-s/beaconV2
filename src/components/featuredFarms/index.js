@@ -14,11 +14,11 @@ function FeaturedFarms (props) {
   if (!allFarms) getTheFarms()
 
   return (
-    <div className='listOfFarms'>
-      <h2 className = 'featuredFarmsHeaderText'>Featured Farms</h2>
+    <div className='featuredFarms'>
+      <h2 className='featuredFarmsHeaderText'>Featured Farms</h2>
       {
         _.map(allFarms, (farm) => (
-          <div className='eachFarm' key={farm.id}>
+          <div className='eachFeaturedFarm' key={farm.id}>
             <Link to={`/farm/${farm.id}/`}>
               <h3>{farm.name}, {farm.location}</h3>
               <div className='farmImage'>

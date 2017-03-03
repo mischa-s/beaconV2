@@ -33,7 +33,7 @@ class Map extends React.Component {
     }
 
     return (
-      <div className='map'>
+      <div>
         <div ref='map' style={mapStyle}> Loading map...
         </div>
       </div>
