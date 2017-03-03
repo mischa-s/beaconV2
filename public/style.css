@@ -107,6 +107,12 @@ button {
   font-size: 3rem;
   padding: 1rem
 }
+.currentFarmDescription{
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
+  text-align: right;
+}
 .currentFarmMap{
   display: flex;
   justify-content: center;

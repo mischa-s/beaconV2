@@ -32,7 +32,10 @@ class FarmProfile extends React.Component {
           <div className='farmImage'>
             <img src={currentFarm.mainImage} />
           </div>
-          <h3>{currentFarm.type}</h3>
+          <div className='currentFarmDescription'>
+            <h3>{currentFarm.type}</h3>
+            {currentFarm.description}
+          </div>
         </div>
         <div className='currentFarmMap'>
           <Map dispatch={dispatch} allFarms={[currentFarm]} />

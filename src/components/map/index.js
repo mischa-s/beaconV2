@@ -1,21 +1,20 @@
 const React = require('react')
-const EIFFEL_TOWER_POSITION = {
-  lat: 48.858608,
-  lng: 2.294471
+const center = {
+  lat: 40,
+  lng: 2
 }
 
 class Map extends React.Component {
   componentDidMount () {
     this.map = new google.maps.Map(this.refs.map, {
-      center: EIFFEL_TOWER_POSITION,
-      zoom: 2
+      center: center,
+      zoom: 1
     })
   }
 
   componentDidUpdate () {
     console.log(this.props, 'props in map')
     const allFarms = this.props.allFarms
-    const forGeocoding = this.props.forGeocoding
     const arrOfFarms = allFarms.map((farm) => {
       return new google.maps.Marker({
         position: {lat: farm.latitude, lng: farm.longitude},
