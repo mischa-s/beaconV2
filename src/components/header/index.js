@@ -12,7 +12,7 @@ function Header (props) {
         </Link>
       </div>
       <div className='navbar'>
-        <button>Farms Profiles</button>
+        <button>Farm Profiles</button>
         <button>Join The Network</button>
         <button>About</button>
       </div>
