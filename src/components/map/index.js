@@ -16,6 +16,7 @@ class Map extends React.Component {
     console.log(this.props, 'props in map')
     const allFarms = this.props.allFarms
     const arrOfFarms = allFarms.map((farm) => {
+      console.log(Number(this.props.allFarms[0].latitude), 'searching for a number')
       return new google.maps.Marker({
         position: {lat: Number(farm.latitude), lng: Number(farm.longitude)},
         map: this.map,
