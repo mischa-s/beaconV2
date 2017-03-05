@@ -3,7 +3,6 @@ const { connect } = require('react-redux')
 const { Link } = require('react-router')
 
 function Header (props) {
-  console.log(props, 'props in header')
   return (
     <div className='header'>
       <div className='headerText'>

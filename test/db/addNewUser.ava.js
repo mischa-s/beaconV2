@@ -6,10 +6,8 @@ const db = require('../../db')(testKnex)
 
 // migrate the latest database tables
 test.beforeEach(() => {
-  console.log('migrating....')
   return testKnex.migrate.latest()
     .then(() => {
-      console.log('seeds....')
       return testKnex.seed.run()
     })
 })

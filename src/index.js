@@ -15,7 +15,6 @@ const FarmProfile = require('./containers/farmProfile')
 const store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(() => {
-  console.log('Index.js state log', store.getState())
 })
 
 const Root = ({store}) => {
@@ -32,7 +31,6 @@ const Root = ({store}) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded')
   const root = document.querySelector('#app')
 
   ReactDOM.render(
