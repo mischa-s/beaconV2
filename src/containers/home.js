@@ -8,11 +8,13 @@ function Home (props) {
   const { dispatch, allFarms } = props
   return (
     <div className='homeContainer'>
-      <div className='homepageMap'>
-        <Map dispatch={dispatch} allFarms={allFarms} />
+      <div className='homeContainerLeft'>
+        <div className='homepageMap'>
+          <Map dispatch={dispatch} allFarms={allFarms} />
+        </div>
+        <AddFarmForm dispatch={dispatch} />
       </div>
       <FeaturedFarms allFarms={allFarms} dispatch={dispatch} />
-      <AddFarmForm dispatch={dispatch} />
     </div>
   )
 }
