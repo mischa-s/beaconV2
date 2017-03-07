@@ -91,7 +91,7 @@ input:active{
 .featuredFarms{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 40vw;
   margin: 2rem;
   margin-left: auto;
   margin-right: 5%;
@@ -112,10 +112,13 @@ input:active{
 .addFarmForm{
   display: flex;
   flex-direction: column;
-  width: 40rem;
+  width: 40vw;
   padding: 2rem;
   background-color: rgba(62, 39, 35, 0.9);
-  margin-left: 1rem;
+  margin-left: 3rem;
+}
+.addFarmForm button{
+  background-color: rgba(76, 175, 80, 0.66)
 }
 .about {
   width: 60vw;
