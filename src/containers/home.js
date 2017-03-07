@@ -2,6 +2,7 @@ const React = require('react')
 const { connect } = require('react-redux')
 const Map = require('../components/map')
 const FeaturedFarms = require('../components/featuredFarms')
+const AddFarmForm = require('../components/addFarmForm')
 
 function Home (props) {
   const { dispatch, allFarms } = props
@@ -11,6 +12,7 @@ function Home (props) {
         <Map dispatch={dispatch} allFarms={allFarms} />
       </div>
       <FeaturedFarms allFarms={allFarms} dispatch={dispatch} />
+      <AddFarmForm dispatch={dispatch} />
     </div>
   )
 }
