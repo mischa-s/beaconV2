@@ -10,6 +10,7 @@ const initialState = require('../state')
 // Top Level Components
 const App = require('./containers/app')
 const Home = require('./containers/home')
+const About = require('./containers/about')
 const FarmProfile = require('./containers/farmProfile')
 
 const store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
@@ -24,6 +25,7 @@ const Root = ({store}) => {
         <Route path='/' component={App}>
           <IndexRoute component={Home} />
           <Route path='/farm/:id' component={FarmProfile} />
+          <Route path='about' component={About} />
         </Route>
       </Router>
     </Provider>
