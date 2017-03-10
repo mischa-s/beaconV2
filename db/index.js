@@ -8,6 +8,13 @@ module.exports = function (knex) {
       return knex('farms')
         .select()
         .where('id', id)
+    },
+
+    createFarm: function (table, farm) {
+      return knex(table).insert(farm)
+      .then(() => {
+        return knex(table).select()
+      })
     }
   }
 }

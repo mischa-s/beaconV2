@@ -14,15 +14,17 @@ class Map extends React.Component {
 
   componentDidUpdate () {
     const allFarms = this.props.allFarms
-    const arrOfFarms = allFarms.map((farm) => {
-      if(farm.name)
-      return new google.maps.Marker({
-        position: {lat: Number(farm.latitude), lng: Number(farm.longitude)},
-        map: this.map,
-        title: farm.name
+    if(allFarms) {
+      const arrOfFarms = allFarms.map((farm) => {
+        if(farm.name)
+        return new google.maps.Marker({
+          position: {lat: Number(farm.latitude), lng: Number(farm.longitude)},
+          map: this.map,
+          title: farm.name
+        })
       })
-    })
-    return arrOfFarms
+      return arrOfFarms
+    }
   }
 
   render () {
