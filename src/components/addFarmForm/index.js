@@ -17,16 +17,26 @@ class addFarmForm extends React.Component {
       FindLatLong(location, function (result) {
         const longitude = result.Longitude
         const latitude = result.Latitude
-
-        request.post('api/v1/createfarm')
-        .send({name, location, type, description, mainImage, latitude, longitude})
-        .end((err, data) => {
-          if (err) throw err
-          dispatch({type: 'GET_ALL_FARMS', payload: data.body})
-        })
+        if (longitude && latitude) {
+          request.post('api/v1/createfarm')
+          .send({name, type, description, mainImage, latitude, longitude})
+          .end((err, data) => {
+            if (err) throw err
+            dispatch({type: 'GET_ALL_FARMS', payload: data.body})
+          })
+        }
       })
+      this.refs.name.value = ''
+      this.refs.location.value = ''
+      this.refs.type.value = ''
+      this.refs.description.value = ''
+      this.refs.image.value = ''
+      this.refs.video.value = ''
+    } else {
+      this.refs.farmName.focus()
     }
   }
+
   render () {
     return (
       <div>
